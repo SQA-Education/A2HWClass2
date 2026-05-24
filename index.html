@@ -135,7 +135,7 @@ function directSubmit(){
   function showFailure(){if(btn){btn.disabled=false;btn.textContent='Failed - Tap to Retry';btn.style.background='#ef4444';}if(statusEl){statusEl.textContent='⚠️ Submission failed. Check your internet and tap Retry.';statusEl.style.display='block';statusEl.style.background='#fef2f2';statusEl.style.color='#991b1b';}}
   var formData=new FormData();
   formData.append('entry.1066076854',name);
-  formData.append('entry.351193357',clsVal);
+  formData.append('entry.351193357',SESSION);
   formData.append('entry.2003686479',scores.l+'/3');
   formData.append('entry.985159923',scores.v+'/6');
   formData.append('entry.2097271288',scores.w+'/20');
@@ -144,7 +144,7 @@ function directSubmit(){
   formData.append('entry.1853593873',totalPct);
   formData.append('entry.388860548',writingText||'');
   formData.append('entry.880068307',spokenText||'No transcript captured');
-  formData.append('entry.514421492',SESSION);
+  formData.append('entry.514421492',clsVal);
   formData.append('entry.1451249480',teacherVal);
   var done=false;
   var timeoutId=setTimeout(function(){if(!done){done=true;showSuccess();}},6000);
